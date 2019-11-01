@@ -19,7 +19,7 @@
 
 /* Import Design Styles */
 
- @import ulr("wc.designs.css") only screen;
+ @import url("wc.designs.css") only screen;
 
 /* Flex Layout Styles */
 
@@ -49,12 +49,34 @@ aside{
    -webkit-flex-flow:row wrap;
    flex-flow:row wrap;
 }
+aside div{
+   -webkit-flex: 1 1 180px;
+   flex: 1 1 180px;
+}
 /* =============================
 	Mobile Styles: 0 - 480 pixels
    =============================
 */
 
-
+@media only screen and (max-width: 480px){
+   nav#hole_list{
+      -webkit-order: 99;
+      order: 99;
+   }
+   footer{
+      -webkit-order: 100;
+      order: 100;
+   }
+   nav.horizontal ul{
+      display: none;
+   }
+   ul::hover{
+      display:block;
+   }
+   aside{
+      display:none;
+   }
+}
 
 
 
@@ -63,3 +85,16 @@ aside{
    =================================================
 */
 
+@media only screen and (min-width: 481px){
+   #navicon{
+      display:none;
+   }
+   nav.horizontal ul{
+      -webkit-flex-flow: row nowrap;
+      flex-flow: row nowrap;
+   }
+   nav.horizontal ul li{
+      -webkit-flex: 1 1 auto;
+      flex: 1 1 auto;
+   }
+}
