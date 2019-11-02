@@ -125,8 +125,15 @@ nav#bottom ul{
       -webkit-flex-flow: row nowrap;
       display: flex;
       flex-flow: row nowrap;
+      background-color: rgb(51, 51, 51);
+      height: 50px;
       align-items: center;
-      justify-content: center; 
-      background-color: rgb(51, 51, 51)
+      justify-content: center;
+   }
+   nav#top ul li{
+      max-width: 80px;
+   }
+   p#link{
+      display: none;
    }
 }
